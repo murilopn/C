@@ -1,0 +1,18 @@
+Tem alguma vantagem em colocar o pc pra rodar em 32 bits?
+
+Tem só se eu tiver salvando mt dado em disco/na rã (economiza memória,mas
+não processamento)
+
+32 bits não consegue armazenar mais q 4GB de rã
+64 bits armazena qunatidades absurda de rã (casa de quintilhões de GB)
+
+float tem menos possibildades q int (ambos são 32 bits, mas tem alguns números que float não
+consegue representar)
+
+o float aproxima o número, mas se vc der float com tipo 20 casas decimais, ele vai mostrar uns números nada a ver
+
+char não é caractere, é 1 byte (8 bits)
+
+Para o computador, 10=A=1010
+
+Se o último operador do número à direita for 1, ele é ímpar

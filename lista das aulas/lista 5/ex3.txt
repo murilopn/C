@@ -1,0 +1,53 @@
+a) (133 & 122) | 13
+133= 10000101
+122= 01111010 (tem que colocar o zero no final)
+13= 1101
+
+  10000101
+& 01111010
+-----------
+  00000000
+
+  00000000
+|     1101
+-----------
+  00001101
+
+
+b) (!foo) (onde foo é uma variável do tipo char com valor igual a 3)
+
+    O resultado vai ser falso, pois qualquer número diferente de zero é TRUE
+
+
+c) (x <= 0 && x > 10) (onde x é uma variável do tipo int)
+    
+    Falso, pois não tem com x ser maior que 10 e menor ou igual a 0
+
+
+d) (200 | 6) ^ (30 & 0x08)
+200=1100 1000
+6= 0110
+30= 0001 1110
+0x08= 0000 1000
+
+(200|6)
+
+  1100 1000
+| 0000 0110
+------------
+  1100 1110
+
+(30 & 0x08)
+
+  0001 1110
+& 0000 1000
+------------
+  0000 1000
+
+(200 | 6) ^ (30 & 0x08)
+
+  1100 1110
+^ 0000 1000
+-------------
+  1100 0110
+

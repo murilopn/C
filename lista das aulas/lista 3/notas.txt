@@ -1,0 +1,10 @@
+operadores relacionais: 
+> , >=, <. <=, ==, != (lembrar que o sinal de igual se escreve da forma que se lê)
+operadores aritméticos:
++, -, /, *
+
+O ";" é sempre utilizado no final da proposição, dado isso, ao colocar isso ao final de um if, independente do valor booleano do if,
+ele vai ignorar o bloco e executar tudo, por isso não podemos colocar um ";". 
+
+Ao não identar, o else vai ser sempre do último if (por isso é necessário identar e utilizar chaves, principalmente no aninhamento
+desses condicionais)

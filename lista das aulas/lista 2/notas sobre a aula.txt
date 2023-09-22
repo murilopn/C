@@ -1,0 +1,7 @@
+int main () é chamada de arquivo de cabeçalho, preferível usar este termo do que função
+
+%d e %i são pra inteiro. Entretanto, são diferentes, no 'i' 032 e 32 são diferentes 
+
+quando eu multiplica uma variável,  eu multiplica o conteúdo dela, por isso quando eu faço numa string, escreve ela 2x
+
+pra 5/2 resultar em um float, posso fazer 5.0/2, 5/2.0 ou 5.0/2.0
