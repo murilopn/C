@@ -18,7 +18,7 @@ PARA DECLARAR PONTEIROS:
     ex:
         int *pt_num;
 
-    obs:O time do ponteiro vai ser compatível com o endereço da variável que ele está armazenando, ou seja,
+    obs:O tipo do ponteiro vai ser compatível com o endereço da variável que ele está armazenando, ou seja,
     ele é igual ao tipo do da variável que está armazenado no seu conteúdo (que é o endereço dessa variável)
 
     ATENÇÃO: O tamanho do ponteiro tem relação com o tamanho do endereço que ele carrega, ou seja,
