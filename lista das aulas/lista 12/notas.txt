@@ -47,7 +47,7 @@ PARA INICIALIZAR PONTEIROS:
                 printf("Deu certo");
             }
 
-ACESSANDO O COTENÚDO DE VARIÁVEIS REFERENCIADAS:
+ACESSANDO O CONTEÚDO DE VARIÁVEIS REFERENCIADAS:
     Eu consigo alterar o valor da variável alterando o valor do ponteiro.
         ex:
             int a=20,*p;
