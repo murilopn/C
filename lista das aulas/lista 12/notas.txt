@@ -63,6 +63,18 @@ USO DO OPERADOR "*":
     - Ao atribuir o endereço de uma variável para o ponteiro, não devemos usar
     - Usamos quando precisamos acessar o conteúdo apontado pelo ponteiro
 
+PASSANDO PONTEIRO COMO REFERÊNCIA PARA A FUNÇÃO:
+    void TiraMedia (int* prova1, int* prova2){
+        float media;
+        media=(*prova1 + *prova2)/2.0;
+        printf("%f", media);
+}
+    int *p1,*p2,a=10,b=5;
+    p1=&a;
+    p2=&b;
+    TiraMedia (&p1, &p2); -Assim como no scanf, na hora de "passar" os valores, eu utilizo o "&"
+
+
 OBSERVAÇÕES:
     -É comum o uso de ponteiro para ponteiro, é uma variável que armazena um endereço de memória, só que
     este endereço armazenado é de outro ponteiro.
@@ -70,3 +82,5 @@ OBSERVAÇÕES:
         int a=20, *p, **c; - SÃO DOIS ASTERISCOS NO PONTEIRO QUE RECEBE O OUTRO
             p=&a;
             c=&p; - obs, ele vai armazenar o endereço de memória de p, não tem nada a ver com o a
+
+    - Toda a vez que eu reseto o meu programa, um novo endereço de memória é atribuido para a minha variável (o sistema operacional estabelece um novo stack, ou seja, da um novo "endereço base" na memória).
