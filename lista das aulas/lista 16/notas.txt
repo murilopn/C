@@ -1,1 +1,6 @@
+um vetor de 5 posições de int, por ex, tem 20 bits e não 5, por isso malloc multiplica
+
+a função malloc é genérica, por isso eu tenho que fazer o typecasting antes de chamar a malloc.
+
+é o ponteiro que recebe o retorno da função e não o conteúdo apontado por ele.
 
