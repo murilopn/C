@@ -1,3 +1,55 @@
+O tamanho do vetor deve ser sempre costante, entretanto existem casos em que eu não sei o tamanho
+que o meu vetor deve ter, dado isso eu utilizo dos conceitos de aloção dinâmica.
+
+Stack - Espaço destinado pelo sistema operacional para a execução do programa.
+
+Os casos de stackoverflow acontecem quando o programa exige uma memória susperior à destinada para ele. Sendo assim, a alocação
+dinâmica é a ferramenta necessária para a solução deste problema. Alocação dinâmica é simplesmente destinar o espaço que eu quero (de 
+forma explícita) na hora em que eu estou executando o programa.
+
+Heap - um espaço onde eu posso alocar dinamicamente a memória. Ele fica fora do stack, justamente por conta disso eu consigo utilizar
+a memória dele sem dar stackoverflow
+
+P/ fazer a alocação dinâmica:
+1) Declaramos uma variável que irá apontar para o buffer alocado
+2) Chamamos uma função que aloca o espaço desejado
+3) Usamos o espaço como um vetor
+4) Chamamos uma função que libera o espaço
+
+ex:
+#include <stdio.h>
+#include <stdlib.h>
+
+#define BUFLEN 10000
+
+int main (){
+    1 - escolho o tipo que o ponteiro irá apontar:
+    double * vetor;
+
+    2 - A função q deve ser chamada é a malloc:
+    vetor = (double *) malloc (BUFLEN * sizeof (double))
+
+    3- Eu utilizo o vetor de forma normal, ele é idêntico a como era antes.
+
+    4- A função q deve ser chamada é a free:
+        free(vetor)
+
+    return 0;
+}
+
+Função malloc: 
+    void* malloc (size_t size);
+
+.Ela aloca um certo número de bits e não de posições do vetor, por ex. O parâmetro que ela recebe é justamente
+esse número de bits.
+
+.Ela possui um ponteiro para o void, isso é muito utilizado quando você tem um ponteiro genérico, ou seja, um ponteiro para
+alguma coisa indeterminada. SEMPRE que tiver isso, eu devo fazer um cast (ou seja, colocar o tipo para que é apontado, junto com um *) no lugar
+do void*
+
+.No parâmetro do malloc, eu coloco o número de posições vezes o tamanho de cada posição (nesse tamanho de cada posição, basta "sizeof (tipo)")
+
+OBS: O endereço do vetor fica na stack e o tamanho dele fica na heap. Quando eu chamo a função malloc, ele aloca os bits na heap.
 um vetor de 5 posições de int, por ex, tem 20 bits e não 5, por isso malloc multiplica
 
 a função malloc é genérica, por isso eu tenho que fazer o typecasting antes de chamar a malloc.
