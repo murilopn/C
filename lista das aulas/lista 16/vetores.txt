@@ -1,0 +1,4 @@
+Não é indicado declarar um vetor sem tamanho determinado, pois ele fica dependente da stack, ou seja, quando sai da função ele perde o seu valor, 
+o que limita o uso para apenas uma função e ainda o tamanho deste vetor é extremamente limitado.
+
+Por quê vetores são ponteiros?
