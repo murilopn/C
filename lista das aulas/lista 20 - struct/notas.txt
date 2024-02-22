@@ -1,1 +1,81 @@
+A struct é um tipo que engloba atributos (sub variáveis).
+
+Por ex: vamos supor que eu queira uma série de infomarções sobre 10 alunos de uma sala, eu quero o nome, endeerço, matrícula e CR. Ao invés de criar 40 variáveis, uma para cada, e armazenar cada uma dessas informações sobre cada aluno, eu crio um tipo tAluno (a partir da struct) e para cada variável do tipo tAluno, eu tenho cada os 4 atributos, ou seja, em vez de 40, eu terei 10 variáveis. 
+
+sintaxe:
+typedef struct {
+  float cr=0;
+  int mat=0;
+  char end[20];
+  char nome [15];
+} tAluno;
+
+OBS: Por mais que eu tenha feito essa declaração, esse trecho não ocupa espaço na memória, é só uma definição indicando que o tipo tAluno irá ser utilizado no programa. ou seja, STRUCT É UM TIPO E NÃO UMA VARIÁVEL.
+
+Structs aninhadas - útil de acordo com o caso, por exemplo, vamos supor que eu precisasse da data de nascimento desses 10 alunos.
+
+typadef struct {
+  int dia;
+  int mes;
+  int ano;
+} tData;
+
+typedef struct {
+  float cr=0;
+  int mat=0;
+  char end[20];
+  char nome[15];
+  tData nasc;
+} tAluno;
+
+p/ acessar a info, ex: 
+  tAluno x;
+x.nasc.dia = 19
+
+Alocando dinamicamente um vetor de registros (registros=struct):
+tEstudante *v;
+int n;
+
+v = (tEstudante*) malloc (n * sizeof(Estudante)); 
+... -> posso usar o v normalmente
+free (v);
+
+MUITA ATENÇÃO: 
+Na hora de passar uma struct como parâmetro de função e alterar dentro dela um valor de um vetor, se eu não retornar, o valor desse vetor referente à struct NÃO será alterado, ex:
+
+#define N 5
+typedef struct {
+  vetor[N];
+}tEstudante;
+
+int vet [N];
+tEstudante x;
+
+for (s=0; s<N; s++){
+    vet[s]10;
+    x.vetor[s]=10;
+}
+Analise (vet,x);
+
+void Analise (int vet[N], tEstudante x;
+for (i=0; i<N; i++){
+    vet[i]=i;
+    x.vetor[i]=i;
+}
+o print vai de vet vai ser: 0,1,2,3,4
+o print de x.vetor vai ser: 10,10,10,10,10
+
+PONTEIROS PARA STRUCT:
+variavel -> campo
+essa é uma forma simplificada/equivalente a: (*variavel).campo, ex:
+
+Estudante *px, x;
+px=&x;
+(*px).mat = 10;
+px -> cr = 8.8;
+
+O uso de ponteiros com struct é super comum e eficiente, apesar de não ser necessário. Podemos passar a struct como parâmetro para uma função, atribuir a struct como tipo dessa função, criar uma variável deste mesmo tipo lá dentro e retornar essa variável para uma variável também do mesmo tipo que chamou a função lá na main, essa é uma forma. Entretanto, com struct o efeito é o mesmo e a eficiência é mt mlr, a memória utilizada é bem menor, pois os dados da struct não são copiadas por inteiro, a eficiência é bem maior.
+
+
+
 
