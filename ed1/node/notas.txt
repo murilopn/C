@@ -1,0 +1,10 @@
+sum.c:
+o t=t->next faz com que ande para o próximo "vagão" e cheque (a parte do meio do for) se aquele vagão existe, caso sim,
+ele executa o código, caso não, ele sai fora.
+
+Eu poderia utilizar só o List *l para fazer, entretanto quando eu fizesse o for, daria ruim em alguns programas, pois ao mexer no next
+eu perco o endereço da cabeça (o começo) da fila, daí eu poderia me complicar.
+
+
+
+ATENÇÂO: Devo sempre pensar que são vagões espaçados na memória, ou seja, não há uma linearidade, não é +1 ou +2, não existe isso.
