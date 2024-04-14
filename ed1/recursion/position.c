@@ -5,7 +5,7 @@
 int position (List *l, int k) {
   if(l!=NULL){
     if(l->data==k){
-      return 0;
+      return 0; 
     }
     else{
       int aux= position(l->next,k);

@@ -4,7 +4,7 @@
 int size (List *l) {
 
   if (l!=NULL){
-    return (size(l->next) + 1);
+    return (1 + size(l->next));
   }
   return 0;
 }
