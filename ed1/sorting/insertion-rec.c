@@ -2,7 +2,23 @@
 
 /* */
 void insertion_sort_recursive (int *A, int n) {
-  /*Terminar*/	
+
+  if (n==1){ //toda recursão deve ter condição de parada.
+    return;
+  }
+    insertion_sort_recursive(A, n-1); //eu lido com os elementos da esquerda primeiro pra depois lidar com os da direita.
+   
+    int i=n-1,j,chave; //to final (por causa da recursão.)
+    j=i-1;
+    chave = A[i];    
+
+    while ( j>=0 && A[j] > chave){ //devo decrementar o j.
+        A[j+1]=A[j];
+        j--;    
+    }
+
+    A[j+1]=chave;
+
 }
 
 /* */

@@ -1,0 +1,10 @@
+Os tempos estão em ordem para 10, 100, 10.000, 100.000, 1.000.000 e 10.000.000
+
+random: 0s, 0s, 0s, 0.01s, 0.15s, 1.69s
+crescente: 0s, 0s, 0s, 0.19s, 19.76s (fiz até 100k)
+decrescente: 0s, 0s, 0.01s, 0.16s, 16.18s (fiz até 100k)
+todos elementos iguais: 0s, 0s, 0.01s, 0.19s, 19.48s (fiz até 100k)
+
+Pelos dados obtidos, pode-se afirmar que o para números aleatórios o algoritmo funciona melhor. O pior caso foi para números em ordem crescente. Este curto tempo
+para o random se da por conta do split se dar em 2 partes com tamanhos similares, ou seja, o pivo fica próximo do meio nas divisões. Nos outros 3 algoritmos isso 
+não ocorre, por isso o tempo é tão maior.

@@ -2,12 +2,16 @@
 
 /* */
 void insertion_sort (int *A, int n) {
-  int i,chave;
-  for (i=0; i<n; i++){
-    chave=i+1;
-    while (A[i] > A[chave] && ){
+  int i,j,chave;
+  for (i=1; i<n; i++){  //ele vai voltando no vetor, ou seja, vai testar 0 e 1, dps 0,1 e 2 e assim sucessivamente, por isso i=1 e i=0.
+      j=i-1;
+      chave = A[i];  
 
+    while ( j>=0 && A[j] > chave){ //o j>=0 deve vir antes do && e eu devo decrementar o j.
+        A[j+1]=A[j];
+        j--;    
     }
+    A[j+1]=chave;
   }	
 }
 
@@ -33,9 +37,9 @@ int main (int argc, char *argv[]) {
   }  
 
   start = clock();
-  print (A, n, "Input");
+  //print (A, n, "Input");
   insertion_sort (A, n);
-  print (A, n, "Sorted");
+  //print (A, n, "Sorted");
   end = clock();
   elapsed_time = (end - start)/(double)CLOCKS_PER_SEC;
   printf("Running time: %.2f\n", elapsed_time);
