@@ -1,0 +1,2 @@
+ Ela funciona corretamente e se diferencia da vista em sala, pois ela é utilizado apenas um vetor.A complexidade de tempo é menor, uma vez
+ que é utilizado apenas uma estrutura de repetição para fazer a ordenação.

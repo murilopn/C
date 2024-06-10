@@ -8,3 +8,9 @@ todos elementos iguais: 0s, 0s, 0.01s, 0.19s, 19.48s (fiz até 100k)
 Pelos dados obtidos, pode-se afirmar que o para números aleatórios o algoritmo funciona melhor. O pior caso foi para números em ordem crescente. Este curto tempo
 para o random se da por conta do split se dar em 2 partes com tamanhos similares, ou seja, o pivo fica próximo do meio nas divisões. Nos outros 3 algoritmos isso 
 não ocorre, por isso o tempo é tão maior.
+
+Segunda questão:
+crescente: 0s, 0s, 0s, 0s, 0.01s, 0.1s, 1.07s.
+decrescente: 0s, 0s, 0s, 0s, 0.02s, 0.15s, 1.16s
+todos elementos iguais: 0s, 0s, 0.01s, 0.21s, 20.99s (para 100k)
+

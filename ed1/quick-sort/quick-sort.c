@@ -34,15 +34,15 @@ int main (int argc, char *argv[]) {
   srand(time(NULL));
 
   int i;
-  int n = 100000; /*Altere para 100, 1000, 10 mil, 1 milhao elementos!*/
+  int n = 10; /*Altere para 100, 1000, 10 mil, 1 milhao elementos!*/
   int range = 10; /*intervalo de valores sorteados*/
   int *A = (int *)malloc(n * sizeof(int));
 
   for (i = 0; i < n; i++) {
-    //A[i] = rand() % (n+1); /*valores aleatórios*/
+    A[i] = rand() % (n+1); /*valores aleatórios*/
     //A[i] = i; /*ordem crescente*/
     //A[i] = n-i; /*ordem descrente*/
-    A[i] = 0; /*iguais*/
+    //A[i] = 0; /*iguais*/
   }  
 
   start = clock();

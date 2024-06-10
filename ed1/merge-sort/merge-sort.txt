@@ -1,0 +1,5 @@
+Valores: 10, 100, 1000, 10000,100000, 1000000, 10000000
+Aleatória: 0s, 0s, 0s, 0s, 0,02s, 0.16s, 1.88s;
+Crescente: 0s, 0s, 0s, 0s, 0.01, 0.09s, 0.88s;
+Decrescente: 0s, 0s, 0s, 0s, 0.01s,0.09s,0.92s;
+Todos elementos iguais: 0s, 0s, 0s, 0s, 0.01s, 0.08s, 0.89s;
