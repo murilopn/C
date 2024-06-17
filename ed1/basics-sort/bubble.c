@@ -1,18 +1,15 @@
 #include "utils.h"
 
 /* */
-void bubble_sort (int *A, int n) { //COMPARA DE DOIS EM DOIS
-int aux=0;
+void bubble_sort (int *A, int n) { //COMPARA DE DOIS EM DOIS  
   for (int i=0; i<n; i++){
-    for (int j=0; j<n; j++){
-      if (A[j]>=A[i]){
-        aux=A[i];
-        A[i]=A[j];
-        A[j]=aux;
+    for (int j=0; j<n-i-1; j++){
+      if (A[j]>A[j+1]){ //troca os de posição lado a lado
+        swap(A,j,j+1);
       }
     }
   }
-  }
+}
 
 /* */
 int main (int argc, char *argv[]) {
@@ -36,9 +33,9 @@ int main (int argc, char *argv[]) {
   }  
 
   start = clock();
-  //print (A, n, "Input");
+  print (A, n, "Input");
   bubble_sort (A, n);
-  //print (A, n, "Sorted");
+  print (A, n, "Sorted");
   end = clock();
   elapsed_time = (end - start)/(double)CLOCKS_PER_SEC;
   printf("Running time: %.2f\n", elapsed_time);
