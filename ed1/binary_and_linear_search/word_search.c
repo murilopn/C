@@ -74,7 +74,7 @@ int main (int argc, char *argv[]) {
   clock_t start, end;
   double elapsed_time;
   //char *key = argv[1];
-  char *key = "FORNECEDOR";
+  char *key = "ZOOLOGIA";
   FILE *f = fopen("palavras.txt", "r"); 
   int n = get_number_of_lines(f);
   char **words = (char **)malloc(n * sizeof(char *));

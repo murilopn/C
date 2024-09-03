@@ -12,6 +12,8 @@ void counting_sort (int *A, int n, int range) {
     for (i=0; i<=range; i++){
       C[i]=0;
     }
+
+    
     for (j=0; j< n; j++){
       C[A[j]] = C[A[j]]+1;
     }
